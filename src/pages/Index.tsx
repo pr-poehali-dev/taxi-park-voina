@@ -43,10 +43,10 @@ export default function Index() {
 
   return (
     <div className="min-h-screen">
-      <header className="fixed top-0 w-full bg-secondary/95 backdrop-blur-sm z-50 border-b border-primary/20">
+      <header className="fixed top-0 w-full bg-secondary/95 backdrop-blur-sm z-50 border-b border-primary/20 shadow-2xl">
         <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center animate-zoom-in">
+          <div className="flex items-center space-x-2 perspective-1000">
+            <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center animate-float shadow-lg">
               <span className="text-2xl">🌊</span>
             </div>
             <h1 className="text-2xl font-bold text-white">Волна</h1>
@@ -70,13 +70,13 @@ export default function Index() {
           <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
         </div>
         
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center animate-fade-in">
-            <div className="inline-block mb-6 px-6 py-3 bg-primary text-secondary rounded-full font-bold text-lg animate-zoom-in">
+        <div className="container mx-auto px-4 relative z-10 perspective-1000">
+          <div className="max-w-4xl mx-auto text-center preserve-3d">
+            <div className="inline-block mb-6 px-6 py-3 bg-primary text-secondary rounded-full font-bold text-lg animate-depth-pulse shadow-2xl">
               💸 БОНУС 500₽ ЗА РЕГИСТРАЦИЮ!
             </div>
-            <h2 className="text-5xl md:text-7xl font-extrabold text-white mb-6 animate-slide-right">
-              Таксопарк <span className="text-primary">Волна</span>
+            <h2 className="text-5xl md:text-7xl font-extrabold text-white mb-6 animate-rotate-3d" style={{ textShadow: '0 10px 30px rgba(0,0,0,0.5)' }}>
+              Таксопарк <span className="text-primary drop-shadow-2xl">Волна</span>
             </h2>
             <p className="text-xl md:text-2xl text-gray-300 mb-4 animate-fade-in" style={{ animationDelay: '0.2s' }}>
               Ростов-на-Дону
@@ -102,8 +102,8 @@ export default function Index() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h3 className="text-4xl font-bold text-center mb-12 animate-fade-in">Немного о нас</h3>
-            <div className="grid md:grid-cols-3 gap-6">
-              <Card className="text-center hover:shadow-xl transition-shadow animate-zoom-in">
+            <div className="grid md:grid-cols-3 gap-6 perspective-1000">
+              <Card className="text-center card-3d preserve-3d shadow-xl animate-rotate-3d">
                 <CardHeader>
                   <div className="w-16 h-16 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
                     <Icon name="Award" size={32} className="text-primary" />
@@ -115,7 +115,7 @@ export default function Index() {
                 </CardContent>
               </Card>
               
-              <Card className="text-center hover:shadow-xl transition-shadow animate-zoom-in" style={{ animationDelay: '0.1s' }}>
+              <Card className="text-center card-3d preserve-3d shadow-xl animate-rotate-3d" style={{ animationDelay: '0.1s' }}>
                 <CardHeader>
                   <div className="w-16 h-16 mx-auto mb-4 bg-accent/10 rounded-full flex items-center justify-center">
                     <Icon name="Calendar" size={32} className="text-accent" />
@@ -127,7 +127,7 @@ export default function Index() {
                 </CardContent>
               </Card>
               
-              <Card className="text-center hover:shadow-xl transition-shadow animate-zoom-in" style={{ animationDelay: '0.2s' }}>
+              <Card className="text-center card-3d preserve-3d shadow-xl animate-rotate-3d" style={{ animationDelay: '0.2s' }}>
                 <CardHeader>
                   <div className="w-16 h-16 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
                     <Icon name="Users" size={32} className="text-primary" />
@@ -146,8 +146,8 @@ export default function Index() {
       <section id="tariffs" className="py-16 bg-muted/30">
         <div className="container mx-auto px-4">
           <h3 className="text-4xl font-bold text-center mb-12 animate-fade-in">Наши тарифы</h3>
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <Card className="relative overflow-hidden hover:shadow-2xl transition-all hover:-translate-y-2 animate-slide-right">
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto perspective-1000">
+            <Card className="relative overflow-hidden card-3d preserve-3d shadow-2xl animate-rotate-3d">
               <div className="absolute top-0 left-0 w-full h-2 bg-primary"></div>
               <CardHeader>
                 <div className="w-16 h-16 mb-4 bg-primary/10 rounded-xl flex items-center justify-center">
@@ -178,7 +178,7 @@ export default function Index() {
               </CardContent>
             </Card>
 
-            <Card className="relative overflow-hidden hover:shadow-2xl transition-all hover:-translate-y-2 animate-slide-right border-2 border-accent" style={{ animationDelay: '0.1s' }}>
+            <Card className="relative overflow-hidden card-3d preserve-3d shadow-2xl animate-rotate-3d border-2 border-accent" style={{ animationDelay: '0.1s' }}>
               <div className="absolute top-0 left-0 w-full h-2 bg-accent"></div>
               <div className="absolute top-4 right-4 bg-accent text-white px-3 py-1 rounded-full text-sm font-semibold">
                 Популярное
@@ -212,7 +212,7 @@ export default function Index() {
               </CardContent>
             </Card>
 
-            <Card className="relative overflow-hidden hover:shadow-2xl transition-all hover:-translate-y-2 animate-slide-right" style={{ animationDelay: '0.2s' }}>
+            <Card className="relative overflow-hidden card-3d preserve-3d shadow-2xl animate-rotate-3d" style={{ animationDelay: '0.2s' }}>
               <div className="absolute top-0 left-0 w-full h-2 bg-primary"></div>
               <CardHeader>
                 <div className="w-16 h-16 mb-4 bg-primary/10 rounded-xl flex items-center justify-center">
@@ -252,8 +252,8 @@ export default function Index() {
       <section id="benefits" className="py-16 bg-background">
         <div className="container mx-auto px-4">
           <h3 className="text-4xl font-bold text-center mb-12 animate-fade-in">Наши преимущества</h3>
-          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            <Card className="hover:shadow-xl transition-shadow animate-zoom-in">
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto perspective-1000">
+            <Card className="card-3d preserve-3d shadow-lg animate-rotate-3d">
               <CardHeader>
                 <div className="flex items-center space-x-3">
                   <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center">
@@ -267,7 +267,7 @@ export default function Index() {
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-xl transition-shadow animate-zoom-in" style={{ animationDelay: '0.05s' }}>
+            <Card className="card-3d preserve-3d shadow-lg animate-rotate-3d" style={{ animationDelay: '0.05s' }}>
               <CardHeader>
                 <div className="flex items-center space-x-3">
                   <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
@@ -281,7 +281,7 @@ export default function Index() {
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-xl transition-shadow animate-zoom-in" style={{ animationDelay: '0.1s' }}>
+            <Card className="card-3d preserve-3d shadow-lg animate-rotate-3d" style={{ animationDelay: '0.1s' }}>
               <CardHeader>
                 <div className="flex items-center space-x-3">
                   <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center">
@@ -295,7 +295,7 @@ export default function Index() {
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-xl transition-shadow animate-zoom-in" style={{ animationDelay: '0.15s' }}>
+            <Card className="card-3d preserve-3d shadow-lg animate-rotate-3d" style={{ animationDelay: '0.15s' }}>
               <CardHeader>
                 <div className="flex items-center space-x-3">
                   <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
@@ -309,7 +309,7 @@ export default function Index() {
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-xl transition-shadow animate-zoom-in" style={{ animationDelay: '0.2s' }}>
+            <Card className="card-3d preserve-3d shadow-lg animate-rotate-3d" style={{ animationDelay: '0.2s' }}>
               <CardHeader>
                 <div className="flex items-center space-x-3">
                   <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center">
@@ -323,7 +323,7 @@ export default function Index() {
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-xl transition-shadow animate-zoom-in" style={{ animationDelay: '0.25s' }}>
+            <Card className="card-3d preserve-3d shadow-lg animate-rotate-3d" style={{ animationDelay: '0.25s' }}>
               <CardHeader>
                 <div className="flex items-center space-x-3">
                   <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
@@ -337,7 +337,7 @@ export default function Index() {
               </CardContent>
             </Card>
 
-            <Card className="md:col-span-2 bg-gradient-to-r from-primary/10 to-accent/10 border-2 border-primary hover:shadow-xl transition-shadow animate-zoom-in" style={{ animationDelay: '0.3s' }}>
+            <Card className="md:col-span-2 bg-gradient-to-r from-primary/10 to-accent/10 border-2 border-primary card-3d preserve-3d shadow-xl animate-rotate-3d" style={{ animationDelay: '0.3s' }}>
               <CardHeader>
                 <div className="flex items-center space-x-3">
                   <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
@@ -356,10 +356,10 @@ export default function Index() {
 
       <section id="register" className="py-16 bg-muted/30">
         <div className="container mx-auto px-4">
-          <div className="max-w-2xl mx-auto">
-            <Card className="animate-fade-in shadow-2xl">
+          <div className="max-w-2xl mx-auto perspective-1000">
+            <Card className="card-3d preserve-3d shadow-2xl animate-rotate-3d">
               <CardHeader className="text-center">
-                <div className="w-20 h-20 mx-auto mb-4 bg-primary rounded-full flex items-center justify-center animate-zoom-in">
+                <div className="w-20 h-20 mx-auto mb-4 bg-primary rounded-full flex items-center justify-center animate-float shadow-2xl">
                   <Icon name="FileText" size={40} className="text-secondary" />
                 </div>
                 <CardTitle className="text-3xl mb-2">Регистрация водителя</CardTitle>
