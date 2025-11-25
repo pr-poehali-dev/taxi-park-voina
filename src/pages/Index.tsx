@@ -57,10 +57,16 @@ export default function Index() {
             <a href="#benefits" className="text-white hover:text-primary transition-colors">Преимущества</a>
             <a href="#register" className="text-white hover:text-primary transition-colors">Регистрация</a>
           </div>
-          <a href="tel:+79094020633" className="flex items-center space-x-2 text-primary hover:text-primary/80 transition-colors">
-            <Icon name="Phone" size={20} />
-            <span className="font-semibold">+7 909 402-06-33</span>
-          </a>
+          <div className="flex items-center space-x-4">
+            <a href="tel:+79094020633" className="hidden sm:flex items-center space-x-2 text-primary hover:text-primary/80 transition-colors">
+              <Icon name="Phone" size={20} />
+              <span className="font-semibold">+7 909 402-06-33</span>
+            </a>
+            <a href="/login" className="flex items-center space-x-2 px-4 py-2 bg-primary/10 hover:bg-primary/20 text-primary rounded-lg transition-colors">
+              <Icon name="User" size={20} />
+              <span className="font-semibold">Войти</span>
+            </a>
+          </div>
         </nav>
       </header>
 
